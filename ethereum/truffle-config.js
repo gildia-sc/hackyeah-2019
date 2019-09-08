@@ -1,4 +1,6 @@
+var path = require('path')
 module.exports = {
+    contracts_build_directory: path.join(__dirname, '../frontend/src/build/contracts')
   // Uncommenting the defaults below 
   // provides for an easier quick-start with Ganache.
   // You can also follow this format for other networks;

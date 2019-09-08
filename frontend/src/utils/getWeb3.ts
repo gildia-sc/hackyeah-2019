@@ -10,7 +10,7 @@ export default async () => {
             await ethereum.enable();
             // Acccounts now exposed
             const accounts = await web3.eth.getAccounts();
-            console.log(accounts);
+            web3.eth.defaultAccount =  accounts[0]
             return web3;
         } catch (error) {
             console.log(error)
