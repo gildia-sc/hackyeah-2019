@@ -2,7 +2,13 @@
   {
     "_class": "pl.hackyeah2019.hackyeah.product.Category",
     "id": 1,
-    "name": "Ciastka",
-    "description": "Rodzaj słodkiego wyrobu cukierniczego o różnorodnych kształtach, smakach, wielkości i sposobach przygotowywania. Ciastka są mniejsze od ciast i przeznaczone na jedną porcję. "
+    "name": "Cookie",
+    "description": "A cookie is a baked or cooked food that is typically small, flat and sweet. It usually contains flour, sugar and some type of oil or fat. It may include other ingredients such as raisins, oats, chocolate chips, nuts, etc. Some cookies may also be named by their shape, such as date squares or bars."
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Category",
+    "id": 2,
+    "name": "Gums",
+    "description": "Chewing gum is a soft, cohesive substance designed to be chewed without being swallowed. Modern chewing gum is composed of gum base, sweeteners, softeners/plasticizers, flavors, colors, and, typically, a hard or powdered polyol coating."
   }
 ]

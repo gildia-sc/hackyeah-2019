@@ -4,6 +4,22 @@
     "id": 1,
     "name": "Bahisen Polska",
     "logo": "https://static.wirtualnemedia.pl/media/top/Bahlsen-logo655.png",
-    "rating": 14
+    "rating": 2
+  },
+
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Company",
+    "id": 2,
+    "name": "Secpol Sp. z o.o.",
+    "logo": "http://www.memorialbercika.pl/zdjecia_sponsorzy/116.jpg",
+    "rating": 3
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Company",
+    "id": 3,
+    "name": "Perfetti Van Melle Polska Sp. z o.o.",
+    "logo": "https://static.goldenline.pl/firm_logo/120/firm_11128_c0bdee_small200.jpg",
+    "rating": 7
   }
+
 ]
