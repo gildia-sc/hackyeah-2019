@@ -34,14 +34,14 @@ function ProductDetailsView({history, match}) {
                     <Grid item xs={6}>{product.productWeight} + {product.packageWeight}</Grid>
                     <Grid item xs={6}>Package material type:</Grid>
                     <Grid item xs={6}>
-                        TODO: {/*{product.packageMaterial.code}*/}
+                        {product.packageMaterial.code}
                     </Grid>
                     <Grid item xs={6}>Package material recycling percent:</Grid>
                     <Grid item xs={6}>
-                        TODO {/*{product.packageMaterial.recyclePotential}%*/}</Grid>
+                        {product.packageMaterial.recyclePotential}</Grid>
                     <Grid item xs={6}>Package biodegradate time:</Grid>
                     <Grid item xs={6}>
-                        TODO {/*{product.packageMaterial.timeToBiodegradateInDays} (days)*/}
+                        {product.packageMaterial.timeToBiodegradateInDays} (days)}
                     </Grid>
                 </Grid>
             )}
