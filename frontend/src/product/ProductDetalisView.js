@@ -12,6 +12,12 @@ function ProductDetailsView({history, match}) {
     useEffect(() => {
         product || dispatch(fetchProduct(ean))
     }, [ean])
+    function getProductAndPackageWeight(product) {
+        return product.productWeight + product.packageWeight;
+    }
+    function getGeneratedWasteScore(product) {
+        return getProductAndPackageWeight(product) / product.productWeight * 100 - 100;
+    }
     return (
         <>
             { product && (
@@ -23,15 +29,13 @@ function ProductDetailsView({history, match}) {
                     <Grid item xs={6}>Scoring:</Grid>
                     <Grid item xs={6}>???</Grid>
                     <Grid item xs={6}>Category:</Grid>
-                    <Grid item xs={6}>
-                        TODO {/*{product.category.name}*/}
-                    </Grid>
+                    <Grid item xs={6}>{product.category.name}</Grid>
                     <Grid item xs={6}>Generated waste:</Grid>
-                    <Grid item xs={6}>TODO: {product.productWeight} + {product.packageWeight} / {product.productWeight}</Grid>
+                    <Grid item xs={6}>{getGeneratedWasteScore(product)}%</Grid>
                     <Grid item xs={6}>Shipping distance:</Grid>
                     <Grid item xs={6}>TODO: {product.latitude} / {product.longitude}</Grid>
                     <Grid item xs={6}>Weight with packaging:</Grid>
-                    <Grid item xs={6}>{product.productWeight} + {product.packageWeight}</Grid>
+                    <Grid item xs={6}>{getProductAndPackageWeight(product)} mg</Grid>
                     <Grid item xs={6}>Package material type:</Grid>
                     <Grid item xs={6}>{product.packageMaterial.code}</Grid>
                     <Grid item xs={6}>Package material recycling percent:</Grid>
