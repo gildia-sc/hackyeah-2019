@@ -1,0 +1,32 @@
+[
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Product",
+    "id": 1,
+    "ean": "5901410000000",
+    "name": "Petit Beurre Herbatniki Pełnoziarniste",
+    "image": "https://image.ceneostatic.pl/data/products/41576213/i-krakuski-petit-beurre-herbatniki-pelnoziarniste-50-g.jpg",
+    "productType" : "deprecated",
+    "productWeight": 50000,
+    "packageWeight": 1000,
+    "productDurability": "Not available",
+    "latitude": 19.81422,
+    "longitude": 49.97363,
+    "lca": 49,
+    "category": {
+      "_class": "pl.hackyeah2019.hackyeah.product.Category",
+      "id": 1
+    },
+    "ecoLabel": {
+      "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+      "id": 1
+    },
+    "company": {
+      "_class": "pl.hackyeah2019.hackyeah.product.Company",
+      "id": 1
+    },
+    "packageMaterial": {
+      "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
+      "id": 1
+    }
+  }
+]

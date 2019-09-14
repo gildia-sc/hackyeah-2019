@@ -11,7 +11,8 @@ class GimmeMeBeans {
     @Bean
     Jackson2RepositoryPopulatorFactoryBean respositoryPopulator() {
         Jackson2RepositoryPopulatorFactoryBean factory = new Jackson2RepositoryPopulatorFactoryBean();
-        factory.setResources(new Resource[]{new ClassPathResource("category.json"), new ClassPathResource("products.json")});
+        factory.setResources(new Resource[]{new ClassPathResource("category.json"), new ClassPathResource("company.json"),
+                new ClassPathResource("ecolabel.json"), new ClassPathResource("package_material.json"), new ClassPathResource("product.json")});
         return factory;
     }
 }

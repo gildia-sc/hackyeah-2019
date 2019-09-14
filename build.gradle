@@ -17,6 +17,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
+    runtime group: 'com.fasterxml.jackson.module', name: 'jackson-modules-java8', version: '2.9.8', ext: 'pom'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.4'
+    implementation 'com.fasterxml.jackson.module:jackson-module-parameter-names'
+    
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 

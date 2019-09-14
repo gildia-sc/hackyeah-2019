@@ -1,0 +1,9 @@
+[
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+    "id": 1,
+    "name": "BIO Hellas",
+    "description": "BIO Hellas is an accredited certification body that provides Inspection and Certification services for the organic products according to:\n\nThe Regulation EC 834/2007 & 889/2008\nThe NOP/ USDA Regulation.\nAlso provides inspection services for the organic products according to:\n\nNaturland standard\nBiosuisse standard\nDemeter standard\nKRAV standard.\nBIO Hellas provides inspection and certification services according to the private standards:\n\nNatrue (for the certification of organic and natural cosmetics\nBIO Kouzina (BIO Hellas private standard for the certification of mass catering operations).\nBIO Hellas is an approved inspection and certfication body by the Bulgarian Ministry of Agriculture and Food and by the Moldavian Ministry of Agriculture and Food Industry.The activities of BIO Hellas include the research and promotion of Organic Agriculture and the Development of Inspection and Certification Systems.",
+    "logo": "https://www.hellascert.gr/wp-content/uploads/2018/02/bio-hellas.png"
+  }
+]

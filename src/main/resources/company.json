@@ -1,0 +1,9 @@
+[
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Company",
+    "id": 1,
+    "name": "Bahisen Polska",
+    "logo": "https://static.wirtualnemedia.pl/media/top/Bahlsen-logo655.png",
+    "rating": 14
+  }
+]
