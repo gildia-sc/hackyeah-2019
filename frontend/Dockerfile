@@ -1,9 +1,7 @@
 FROM node:10
 
-COPY build build
+COPY . .
 
 EXPOSE 8000
 
-RUN npm install -g serve
-
-ENTRYPOINT serve -s build
+ENTRYPOINT node server.js

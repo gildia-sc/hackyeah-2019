@@ -32,7 +32,7 @@ jobs:
             - yarn-packages-{{ checksum "frontend/yarn.lock" }}
       - run:
           name: Install Dependencies
-          command: cd frontend && yarn && yarn build
+          command: cd frontend && yarn && yarn
       - save_cache:
           name: Save Yarn Package Cache
           key: yarn-packages-{{ checksum "frontend/yarn.lock" }}
