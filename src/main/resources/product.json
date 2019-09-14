@@ -161,5 +161,35 @@
       "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
       "id": 3
     }
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Product",
+    "id": 6,
+    "ean": "5904825010051",
+    "name": "Alice light",
+    "image": "http://img.e-rast.pl/photos/hfe/5904825010051.jpg",
+    "productType" : "deprecated",
+    "productWeight": 5000,
+    "packageWeight": 300,
+    "productDurability": "10 times",
+    "latitude": 51.747320,
+    "longitude": 19.432770,
+    "lca": 57,
+    "category": {
+      "_class": "pl.hackyeah2019.hackyeah.product.Category",
+      "id": 5
+    },
+    "ecoLabel": [{
+      "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+      "id": 2
+    }],
+    "company": {
+      "_class": "pl.hackyeah2019.hackyeah.product.Company",
+      "id": 6
+    },
+    "packageMaterial": {
+      "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
+      "id": 4
+    }
   }
 ]

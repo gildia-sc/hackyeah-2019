@@ -34,5 +34,12 @@
     "name": "PKN Orlen S.A. ",
     "logo": "http://siodma9.pl/media/k2/items/cache/600085de8ec319c3ad7a50be991624bf_XL.jpg",
     "rating": 9
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Company",
+    "id": 6,
+    "name": "TOP-2 Fabryka Chusteczek S.A.",
+    "logo": "http://www.chusteczki.com.pl/images/logo.jpg",
+    "rating": 6
   }
 ]

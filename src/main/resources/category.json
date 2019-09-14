@@ -22,5 +22,11 @@
     "id": 4,
     "name": "Beverages",
     "description": "A liquid to consume, usually excluding water; a drink. This may include tea, coffee, liquor, beer, milk, juice, or soft drinks."
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Category",
+    "id": 5,
+    "name": "Hygienic products",
+    "description": "Facial, body, and hair care products like shampoo and body wash promote healthy hair and skin. Hand care products such as soap, cleaner, and sanitizer help support effective hand washing. Feminine care products include tampons, sanitary napkins, and other personal hygiene products."
   }
 ]
