@@ -26,7 +26,7 @@ jobs:
       - checkout
       - run: |
           cd frontend
-          yarn build
+          yarn
           docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front .
       - deploy:
           name: Push app docker image to registry
