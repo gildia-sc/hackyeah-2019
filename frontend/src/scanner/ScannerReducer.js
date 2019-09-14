@@ -3,14 +3,14 @@ export default (state = 0, action) => {
         case 'SCANNING_STARTED':
             return state;
         case 'PRODUCT_DETECTED':
-            return action.val;
+            return action.ean;
         case 'SCANNING_ENDED':
-            return state ;
+            return state;
         default:
             return state
     }
 }
 
-export const scannigStarted = (val) => ({ type: 'SCANNING_STARTED', val })
-export const productDetected = (val) => ({ type: 'PRODUCT_DETECTED', val })
-export const scannigEnded = (val) => ({ type: 'SCANNING_ENDED', val })
+export const scannigStarted = (val) => ({type: 'SCANNING_STARTED', val})
+export const productDetected = (ean) => ({type: 'PRODUCT_DETECTED', ean})
+export const scannigEnded = (val) => ({type: 'SCANNING_ENDED', val})
