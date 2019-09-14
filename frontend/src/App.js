@@ -14,7 +14,7 @@ function App() {
                     </p>
                 </header>
                 <Route exact path="/" component={ProductScannerView}/>
-                <Route path="/product/:ecs" component={ProductDetailsView}/>
+                <Route path="/product/:ean" component={ProductDetailsView}/>
             </div>
         </Router>
     );

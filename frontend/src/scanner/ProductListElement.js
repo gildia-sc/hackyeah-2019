@@ -5,7 +5,7 @@ function ProductListElement(product) {
     return (
         < div>
             {
-                product.ecs
+                product.ean
             }
         </div>
     )

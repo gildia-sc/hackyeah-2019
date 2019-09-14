@@ -3,14 +3,16 @@ import React, {useEffect} from "react"
 import {fetchProduct} from "./ProductsReducer"
 
 function ProductDetailsView({history, match}) {
-    const ecs = match.params.ecs
+    const ean = match.params.ean
     const dispatch = useDispatch();
-    const product = useSelector(state => state.productScanner);
-
-    useEffect(() => {dispatch(fetchProduct(ecs))})
+    const products = useSelector(state => state.products.products);
+    const product = products.find(p => p.ean === ean);
+    useEffect(() => {
+        product || dispatch(fetchProduct(ean))
+    }, [ean])
     return (
         <>
-            {product}
+            { product  && product.ean}
         </>)
 }
 
