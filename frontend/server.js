@@ -16,12 +16,12 @@ app.get('/', function(req, res) {
 });
 
 var httpsServer = https.createServer(credentials, app);
-
-httpsServer.listen(443, 'localhost', (err) => {
+var port=443;
+httpsServer.listen(port, (err) => {
     if (err) {
         console.log(err);
         return;
     }
 
-    console.log('Listening at https://localhost:3000');
+    console.log('Listening at https://localhost:' + port);
 });
