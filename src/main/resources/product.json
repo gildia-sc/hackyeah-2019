@@ -2,7 +2,7 @@
   {
     "_class": "pl.hackyeah2019.hackyeah.product.Product",
     "id": 1,
-    "ean": "5901410000000",
+    "ean": "5901414204051",
     "name": "Petit Beurre Herbatniki Pelnoziarniste",
     "image": "https://image.ceneostatic.pl/data/products/41576213/i-krakuski-petit-beurre-herbatniki-pelnoziarniste-50-g.jpg",
     "productType" : "deprecated",
@@ -36,7 +36,7 @@
   {
     "_class": "pl.hackyeah2019.hackyeah.product.Product",
     "id": 2,
-    "ean": "5910000000000",
+    "ean": "590700061223",
     "name": "Sekacz Krolewski",
     "image": "https://biovert.pl/environment/cache/images/0_0_productGfx_681706ff6e6cd6aca510ffbe6678e2b0.jpg",
     "productType" : "deprecated",
