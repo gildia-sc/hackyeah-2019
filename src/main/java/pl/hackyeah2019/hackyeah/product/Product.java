@@ -17,7 +17,7 @@ public class Product {
 
     private String ean;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     private Company company;
 
     @ManyToOne
