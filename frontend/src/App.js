@@ -1,19 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ProductScannerView from "./scanner/ProductScannerView";
+import ProductDetailsView from "./product/ProductDetalisView";
+import {BrowserRouter as Router, Route} from "react-router-dom"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-            Choose Eco
-        </p>
-        <ProductScannerView/>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <header className="App-header">
+                    <p>
+                        Choose Eco
+                    </p>
+                </header>
+                <Route exact path="/" component={ProductScannerView}/>
+                <Route path="/product/:ecs" component={ProductDetailsView}/>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
