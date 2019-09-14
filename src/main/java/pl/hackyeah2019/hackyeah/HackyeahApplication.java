@@ -19,6 +19,8 @@ import pl.hackyeah2019.hackyeah.product.ProductRepository;
 import javax.transaction.Transactional;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 @Transactional
 @SpringBootApplication
@@ -54,7 +56,9 @@ public class HackyeahApplication {
             product.setName("test product");
             product.setCompany(company);
             product.setCategory(category);
-            product.setEcoLabel(ecoLabel);
+            Set<EcoLabel> ecoSet = new HashSet();
+            ecoSet.add(ecoLabel);
+            product.setEcoLabel(ecoSet);
             product.setEan("123456");
 
             repository.save(product);

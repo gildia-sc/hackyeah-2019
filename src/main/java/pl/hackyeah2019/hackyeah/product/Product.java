@@ -2,11 +2,10 @@ package pl.hackyeah2019.hackyeah.product;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -26,8 +25,8 @@ public class Product {
     @ManyToOne
     private Category category;
 
-    @ManyToOne
-    private EcoLabel ecoLabel;
+    @ManyToMany
+    private Set<EcoLabel> ecoLabel;
 
     private String image;
 
