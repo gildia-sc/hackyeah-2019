@@ -9,6 +9,7 @@ function ProductDetailsView({history, match}) {
     const dispatch = useDispatch();
     const products = useSelector(state => state.products.products);
     const product = products.find(p => p.ean === ean);
+    const humanizer = require('humanize-duration')
     useEffect(() => {
         product || dispatch(fetchProduct(ean))
     }, [ean])
@@ -17,6 +18,9 @@ function ProductDetailsView({history, match}) {
     }
     function getGeneratedWasteScore(product) {
         return getProductAndPackageWeight(product) / product.productWeight * 100 - 100;
+    }
+    function humanizeDate(days) {
+        return humanizer(days*24*60*60*1000);
     }
     return (
         <>
@@ -41,7 +45,7 @@ function ProductDetailsView({history, match}) {
                     <Grid item xs={6}>Package material recycling percent:</Grid>
                     <Grid item xs={6}>{product.packageMaterial.recyclePotential}</Grid>
                     <Grid item xs={6}>Package biodegradate time:</Grid>
-                    <Grid item xs={6}>{product.packageMaterial.timeToBiodegradateInDays} (days)</Grid>
+                    <Grid item xs={6}>{humanizeDate(product.packageMaterial.timeToBiodegradateInDays)}</Grid>
                 </Grid>
             )}
         </>)
