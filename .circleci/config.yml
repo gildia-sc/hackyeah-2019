@@ -8,7 +8,7 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: true
       - run:
-          name: Build application Docker image
+          name: Build backend Docker image
           command: |
             gradle build
             docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019 .
@@ -24,10 +24,12 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: |
-          cd frontend
-          yarn
-          docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front .
+      - run:
+          name: Build frontend Docker image
+          command: |
+            cd frontend
+            yarn
+            docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front .
       - deploy:
           name: Push app docker image to registry
           command: |
