@@ -1545,6 +1545,15 @@
   resolved "https://registry.yarnpkg.com/@zeit/schemas/-/schemas-2.6.0.tgz#004e8e553b4cd53d538bd38eac7bcbf58a867fe3"
   integrity sha512-uUrgZ8AxS+Lio0fZKAipJjAh415JyrOZowliZAzmnJSsf7piVL5w+G0+gFJ0KSu3QRhvui/7zuvpLz03YjXAhg==
 
+"@zxing/library@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@zxing/library/-/library-0.15.1.tgz#bf1404394b3f73f7c8d970f7b66475e6cf23fef8"
+  integrity sha512-YeQbmY2nWpIBgR9i74mDnoYxJPSvY7Zy0Zz6+KDCQ+wLb20++9dX2v1iH3Wt/kZ5pntqS0K0V5eZkuk4SibbEw==
+  dependencies:
+    ts-custom-error "^3.0.0"
+  optionalDependencies:
+    text-encoding "^0.7.0"
+
 abab@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.0.tgz#aba0ab4c5eee2d4c79d3487d85450fb2376ebb0f"
@@ -9842,6 +9851,11 @@ test-exclude@^5.2.3:
     read-pkg-up "^4.0.0"
     require-main-filename "^2.0.0"
 
+text-encoding@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/text-encoding/-/text-encoding-0.7.0.tgz#f895e836e45990624086601798ea98e8f36ee643"
+  integrity sha512-oJQ3f1hrOnbRLOcwKz0Liq2IcrvDeZRHXhd9RgLrsT+DjWY/nty1Hi7v3dtkaEYbPYe0mUoOfzRrMwfXXwgPUA==
+
 text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
@@ -9971,6 +9985,11 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
+
+ts-custom-error@^3.0.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/ts-custom-error/-/ts-custom-error-3.1.1.tgz#d30c7415461dac93dc2cc9e9eb2dae92e6423901"
+  integrity sha512-f/syoy+pTE4z82qaiRuthEeZtCGNKzlfs0Zc8jpQFcz/CYMaFSwFSdfFt1sSFnPlDLOEm7RCROdIxZ44N8UlwA==
 
 ts-pnp@1.1.2, ts-pnp@^1.1.2:
   version "1.1.2"

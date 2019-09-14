@@ -1,39 +1,31 @@
 import React, {useEffect} from 'react';
-import Quagga from 'quagga';
+import { BrowserBarcodeReader } from '@zxing/library';
 import {useDispatch} from "react-redux";
 import {productDetected, scannigStarted} from "./ScannerReducer";
 
 function Scanner() {
     const dispatch = useDispatch();
     useEffect(() => {
-        Quagga.init({
-            inputStream: {
-                type: "LiveStream",
-                constraints: {
-                    width: 640,
-                    height: 480,
-                    facingMode: "environment" // or user
-                }
-            },
-            locator: {
-                patchSize: "medium",
-                halfSample: true
-            },
-            numOfWorkers: 2,
-            decoder: {
-                readers: ["code_128_reader", "ean_reader", "ean_8_reader"]
-            },
-            locate: true
-        }, (err) => {
-            if (err) {
-                return console.log(err);
-            }
-            Quagga.start();
+	    let selectedDeviceId;
             dispatch(scannigStarted())
-        });
-        Quagga.onDetected((x) => dispatch(productDetected(x.codeResult.code)))
+	    const codeReader = new BrowserBarcodeReader()
+	    console.log('ZXing code reader initialized')
+	    codeReader.getVideoInputDevices()
+                .then((videoInputDevices) => {
+                    selectedDeviceId = videoInputDevices[0].deviceId
+                    codeReader.decodeOnceFromVideoDevice(selectedDeviceId, 'video').then((result) => {
+			console.log(result)
+			dispatch(productDetected(result.text));
+                    }).catch((err) => {
+                        console.error(err)
+                    })
+                    console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+                })
+                .catch((err) => {
+                    console.error(err)
+                })
     });
-    return <div id="interactive" className="viewport"/>
+    return <div id="interactive" className="viewport"><video id="video" width="600" height="400" style={{border: "1px solid gray"}} autoPlay={true} muted={true} playsInline={true}></video></div>
 }
 
 export default Scanner

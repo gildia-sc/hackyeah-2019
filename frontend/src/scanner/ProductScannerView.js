@@ -8,7 +8,7 @@ function ProductScannerView() {
     return (
         <>
             <Scanner/>
-            xddd
+            We scan
             < div>
                 {products.map((product, id) => <ProductListElement product={product} key={product.ean}/>)}
             </div>
