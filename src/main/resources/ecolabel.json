@@ -19,5 +19,26 @@
     "name": "Docen Polskie",
     "description": "The goal of the undertaking implemented since 2011 is to promote high quality food products available on the Polish market and their producers. Their assessment is carried out by specialists professionally related to food and nutrition technology, who form the Expert Lodge. They sit in it include members of the Chefs' Club. The chairman of the jury is Mirek Drewniak. It is the members of the Lodge of Experts who decide to grant the \"Appreciate Polish\" quality certificate. Program laureates - food producers honored with the \"Appreciate Polish\" sign - after purchasing the appropriate license, receive a package of tools to support marketing activities. Detailed information about them is included below.",
     "logo": "http://newsgastro.pl/images/stories/000_Dorota/Docen.program/Docen_polskie_logotyp.jpg"
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+    "id": 4,
+    "name": "Restriction of Hazardous Substances Directive",
+    "description": "The Restriction of Hazardous Substances Directive 2002/95/EC, (RoHS 1), short for Directive on the restriction of the use of certain hazardous substances in electrical and electronic equipment, was adopted in February 2003 by the European Union.",
+    "logo": "http://reliancecm.com/blog/wp-content/uploads/2013/06/profile_directives.jpg"
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+    "id": 5,
+    "name": "Mobius Loop",
+    "description": "Indicates that an object is capable of being recycled - not that the object has been recycled.",
+    "logo": "https://www.recycling.com/wp-content/uploads/recycling%20symbols/universal/Universal%20Recycling%20Symbol%20%28U%2B2672%29.jpg"
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+    "id": 6,
+    "name": "The Green Dot",
+    "description": "The Green Dot does NOT necessarily mean that the packaging can be recycled. It is a symbol used on packaging in many European countries and signifies that the producer has made a contribution towards the recycling of packaging.",
+    "logo": "https://www.coda-plastics.co.uk/blog/img/bigstock-recycling-3644838.jpg"
   }
 ]
