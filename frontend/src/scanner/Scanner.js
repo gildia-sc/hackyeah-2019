@@ -10,9 +10,10 @@ const Scanner = memo(() => {
             dispatch(scannigStarted())
 	    const hints = new Map();
             const formats = [BarcodeFormat.EAN_13, BarcodeFormat.EAN_8];
-
             hints.set(DecodeHintType.POSSIBLE_FORMATS, formats);
+
 	    const codeReader = new BrowserBarcodeReader()
+	    codeReader.setHints(hints)
 	    console.log('ZXing code reader initialized')
 	    codeReader.getVideoInputDevices()
                 .then((videoInputDevices) => {
