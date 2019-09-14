@@ -1,5 +1,5 @@
-import {fetchProduct} from "../product/ProductReducer";
-import {put, takeEvery} from 'redux-saga/effects'
+import {fetchProduct} from "../product/ProductsReducer";
+import {put, throttle} from 'redux-saga/effects'
 
 
 function* onProductDetected(action) {
@@ -7,5 +7,5 @@ function* onProductDetected(action) {
 }
 
 export function* scannerSaga() {
-    yield takeEvery('PRODUCT_DETECTED', onProductDetected);
+    yield throttle(1000, 'PRODUCT_DETECTED', onProductDetected);
 }

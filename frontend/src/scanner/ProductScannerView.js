@@ -1,20 +1,16 @@
 import React, {useState} from 'react';
 import Scanner from "./Scanner";
 import {useSelector} from "react-redux";
-
-import Button from '@material-ui/core/Button';
+import ProductListElement from "./ProductListElement"
 
 function ProductScannerView() {
-    const product = useSelector(state => state.productScanner);
-    const [start, setStart] = useState(false);
-
+    const products = useSelector(state => state.products.products);
     return (
         <>
-            {product}
-            {!start ?
-                <Button variant="contained" color="primary" onClick={() => setStart(true)}>Start scanning</Button> :
-                <Scanner/>
-            }
+            <Scanner/>
+            < div>
+                {products.map((product, id) => <ProductListElement product={product} key={id}/>)}
+            </div>
         </>)
 }
 

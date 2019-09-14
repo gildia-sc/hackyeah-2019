@@ -32,7 +32,6 @@ function Scanner() {
             dispatch(scannigStarted())
         });
         Quagga.onDetected((x) => dispatch(productDetected(x.codeResult.code)))
-        dispatch(productDetected('123456'));
     });
     return <div id="interactive" className="viewport"/>
 }

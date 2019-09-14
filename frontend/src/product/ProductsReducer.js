@@ -1,7 +1,7 @@
-export default (state = {product: {}, error: null, isFetching: false}, action) => {
+export default (state = {products: [], error: null, isFetching: false}, action) => {
     switch (action.type) {
         case 'FETCH_PRODUCT':
-            return {...state, isFetching: true};
+            return {...state, isFetching: true, products: [...state.products, action.product]};
         case 'FETCH_PRODUCT_SUCCESS':
             return {...state, isFetching: false, product: action.product};
         case 'FETCH_PRODUCT_FAILURE':
@@ -13,3 +13,4 @@ export default (state = {product: {}, error: null, isFetching: false}, action) =
 export const fetchProduct = (ean) => ({type: 'FETCH_PRODUCT', ean});
 export const fetchProductSuccess = (product) => ({type: 'FETCH_PRODUCT_SUCCESS', product});
 export const fetchProductFailure = (error) => ({type: 'FETCH_PRODUCT_FAILURE', error});
+

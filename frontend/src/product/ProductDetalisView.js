@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux"
 import React, {useEffect} from "react"
-import {fetchProduct} from "./ProductReducer"
+import {fetchProduct} from "./ProductsReducer"
 
 function ProductDetailsView({history, match}) {
     const ecs = match.params.ecs

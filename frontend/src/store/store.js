@@ -1,6 +1,6 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import productScanner from "../scanner/ScannerReducer";
-import productReducer from "../product/ProductReducer";
+import products from "../product/ProductsReducer";
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {productSaga} from "../product/ProductSaga";
 import {scannerSaga} from "../scanner/ScannerSaga";
@@ -9,7 +9,7 @@ import createSagaMiddleware from 'redux-saga'
 
 const sagaMiddleware = createSagaMiddleware();
 
-export default createStore(combineReducers({productScanner, productReducer}),
+export default createStore(combineReducers({productScanner, products}),
     composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
 

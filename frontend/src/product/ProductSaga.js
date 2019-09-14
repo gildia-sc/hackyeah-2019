@@ -1,6 +1,6 @@
 import ProductApi from "./ProductApi";
-import {fetchProductFailure, fetchProductSuccess} from "./ProductReducer";
-import {call, put, takeEvery} from 'redux-saga/effects'
+import {fetchProductFailure, fetchProductSuccess} from "./ProductsReducer";
+import {call, put, takeLatest} from 'redux-saga/effects'
 
 function* onProductFetch(action) {
     try {
@@ -12,5 +12,5 @@ function* onProductFetch(action) {
 }
 
 export function* productSaga() {
-    yield takeEvery('FETCH_PRODUCT', onProductFetch);
+    yield takeLatest('FETCH_PRODUCT', onProductFetch);
 }
