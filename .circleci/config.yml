@@ -34,3 +34,9 @@ jobs:
               docker login --username=${TREESCALE_USER} -p ${TREESCALE_PASS} repo.treescale.com
               docker push repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front
             fi
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build-backend
+      - build-frontend
