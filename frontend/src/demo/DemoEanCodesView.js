@@ -9,10 +9,10 @@ function DemoEanCodesView() {
     return (
         <div>
             <Grid container spacing={3}>
-                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5901068008128'))}><img src="/demo-ean-codes/test_barcode_5901068008128_300x169.jpg" /></Link></Grid>
-                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5906395781584'))}><img src="/demo-ean-codes/test_barcode_5906395781584_300x169.jpg" /></Link></Grid>
-                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5907700061223'))}><img src="/demo-ean-codes/test_barcode_5907700061223_300x169.jpg" /></Link></Grid>
-                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5906395223015'))}><img src="/demo-ean-codes/test_barcode_5906395223015_300x169.jpg" /></Link></Grid>
+                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5901068008128'))}><img src="/demo-ean-codes/test_barcode_5901068008128_300x169.jpg" alt="Click to select 5901068008128" /></Link></Grid>
+                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5906395781584'))}><img src="/demo-ean-codes/test_barcode_5906395781584_300x169.jpg" alt="Click to select 5906395781584"  /></Link></Grid>
+                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5907700061223'))}><img src="/demo-ean-codes/test_barcode_5907700061223_300x169.jpg" alt="Click to select 5907700061223"  /></Link></Grid>
+                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5906395223015'))}><img src="/demo-ean-codes/test_barcode_5906395223015_300x169.jpg" alt="Click to select 5906395223015"  /></Link></Grid>
             </Grid>
             <Grid item>
                 <Grid item><Link to="/">Back to homepage</Link></Grid>

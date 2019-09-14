@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Scanner from "./Scanner";
 import {useSelector} from "react-redux";
 import ProductListElement from "./ProductListElement"
