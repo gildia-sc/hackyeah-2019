@@ -15,8 +15,6 @@ export const fetchProductSuccess = (product) => ({type: 'FETCH_PRODUCT_SUCCESS',
 export const fetchProductFailure = (error) => ({type: 'FETCH_PRODUCT_FAILURE', error});
 
 function combine(products, product) {
-    if (products.find(p => p.ean === product.ean)) {
-        return products
-    }
-    return [product, ...products]
+    const filtered = products.filter(p => p.ean !== product.ean)
+    return [product, ...filtered]
 }
