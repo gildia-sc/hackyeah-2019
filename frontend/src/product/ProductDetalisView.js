@@ -19,7 +19,7 @@ function ProductDetailsView({history, match}) {
                     <Grid item xs={6}>Product name:</Grid>
                     <Grid item xs={6}>{product.name}</Grid>
                     <Grid item xs={6}>Company:</Grid>
-                    <Grid item xs={6}>{product.company}</Grid>
+                    <Grid item xs={6}>{product.company.name}</Grid>
                     <Grid item xs={6}>Scoring:</Grid>
                     <Grid item xs={6}>???</Grid>
                     <Grid item xs={6}>Category:</Grid>
