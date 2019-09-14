@@ -4,8 +4,8 @@
     "id": 1,
     "code": "PP05",
     "logo": "http://www.plasticexpert.co.uk/wp-content/uploads/2014/07/images.jpg",
-    "recyclePotential": 30,
-    "timeToBiodegradateInDays": 365
+    "recyclePotential": 20,
+    "timeToBiodegradateInDays": 10950
   },
   {
     "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
