@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:11-jdk-browsers
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Build application Docker image
+          command: |
+            gradle build
+            docker build --cache-from=nmap-grabber -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019 .
+      - deploy:
+          name: Push app docker image to registry
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              docker login --username=${TREESCALE_USER} -p ${TREESCALE_PASS} repo.treescale.com
+              docker push repo.treescale.com/${TREESCALE_USER}/hackyeah:2019
+            fi
