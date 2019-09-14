@@ -5,6 +5,6 @@
     "code": "PP05",
     "logo": "http://www.plasticexpert.co.uk/wp-content/uploads/2014/07/images.jpg",
     "recyclePotential": 30,
-    "timeToBiodegradate": "PT240H"
+    "timeToBiodegradateInDays": 365
   }
 ]
