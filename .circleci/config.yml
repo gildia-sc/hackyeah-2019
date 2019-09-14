@@ -26,16 +26,13 @@ jobs:
       - checkout
       - setup_remote_docker:
             docker_layer_caching: true
-      - run:
-          name: Change folder to 'frontend'
-          command: cd frontend
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
             - yarn-packages-{{ checksum "frontend/yarn.lock" }}
       - run:
           name: Install Dependencies
-          command: yarn install --frozen-lockfile
+          command: cd frontend && yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
           key: yarn-packages-{{ checksum "frontend/yarn.lock" }}
@@ -43,13 +40,12 @@ jobs:
             - ~/.cache/yarn
       - run:
           name: Build frontend Docker image
-          command: |
-            cd frontend
-            docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front .
+          command: cd frontend && docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front .
       - deploy:
           name: Push app docker image to registry
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              cd frontend
               docker login --username=${TREESCALE_USER} -p ${TREESCALE_PASS} repo.treescale.com
               docker push repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front
             fi
