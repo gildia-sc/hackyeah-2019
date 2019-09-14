@@ -40,5 +40,12 @@
     "name": "The Green Dot",
     "description": "The Green Dot does NOT necessarily mean that the packaging can be recycled. It is a symbol used on packaging in many European countries and signifies that the producer has made a contribution towards the recycling of packaging.",
     "logo": "https://www.coda-plastics.co.uk/blog/img/bigstock-recycling-3644838.jpg"
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+    "id": 7,
+    "name": "Sok NFC",
+    "description": "NFC juice is otherwise pressed juice, while the letters NFC come from the English name "not from concentrate". Such an inscription on a bottle or carton means that the content was not made from concentrate, but was created in a "home" way - fruits and vegetables were washed, squeezed and poured into a dish. The only thing that can distinguish between pressed juices and those made at home is pasteurization, which is often used in mass production. Thanks to it, the juice gains a longer shelf life and can be stored at room temperature. All pressed juices are bottled hot or pasteurized, other pressed juice, if not pasteurized, is fresh, which needs to be drunk within a few hours.",
+    "logo": "https://www.lidl.pl/catalog3media/pl/logo/540/lg/nfc.jpg"
   }
 ]

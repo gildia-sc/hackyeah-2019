@@ -16,5 +16,11 @@
     "id": 3,
     "name": "Laptop accessories",
     "description": "Accessories such as a keyboard and mouse may be essential in order to operate your computer.Others - such as graphics tablets and barcode readers - may be useful for specialist tasks. Computer accessories are also called computer peripherals and can include printers and scanners and storage devices."
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Category",
+    "id": 4,
+    "name": "Beverages",
+    "description": "A liquid to consume, usually excluding water; a drink. This may include tea, coffee, liquor, beer, milk, juice, or soft drinks."
   }
 ]
