@@ -27,8 +27,8 @@ jobs:
       - setup_remote_docker:
             docker_layer_caching: true
       - run:
-          - name: Change folder to 'frontend'
-          - command: cd frontend
+          name: Change folder to 'frontend'
+          command: cd frontend
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
