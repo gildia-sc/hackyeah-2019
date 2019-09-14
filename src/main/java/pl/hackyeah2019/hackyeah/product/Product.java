@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Data
 @Entity
@@ -16,5 +17,35 @@ public class Product {
     private Long id;
 
     private String name;
+
+    private String ean;
+
+    @ManyToOne
+    private Company company;
+
+    @ManyToOne
+    private Category category;
+
+    @ManyToOne
+    private EcoLabel ecoLabel;
+
+    private String image;
+
+    private String productType;
+
+    private Integer productWeight;
+
+    private Integer packageWeight;
+
+    @ManyToOne
+    private PackageMaterial packageMaterial;
+
+    private String productDurability;
+
+    private Double latitude;
+
+    private Double longitude;
+
+    private Double lca;
 
 }
