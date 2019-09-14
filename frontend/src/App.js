@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom"
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import NewProductSentView from "./send-new/NewProductSentView";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/product/:ean" component={ProductDetailsView}/>
                 <Route path="/demo-ean-codes" component={DemoEanCodesView}/>
                 <Route path="/send-new-product/:ean" component={SendNewProductView}/>
+                <Route path="/new-product-sent" component={NewProductSentView}/>
             </div>
         </Router>
     );
