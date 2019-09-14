@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build-backend:
     docker:
       - image: circleci/openjdk:11-jdk-browsers
     steps:
@@ -11,11 +11,26 @@ jobs:
           name: Build application Docker image
           command: |
             gradle build
-            docker build --cache-from=nmap-grabber -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019 .
+            docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019 .
       - deploy:
           name: Push app docker image to registry
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login --username=${TREESCALE_USER} -p ${TREESCALE_PASS} repo.treescale.com
               docker push repo.treescale.com/${TREESCALE_USER}/hackyeah:2019
+            fi
+  build-frontend:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: |
+          yarn build
+          docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front .
+      - deploy:
+          name: Push app docker image to registry
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              docker login --username=${TREESCALE_USER} -p ${TREESCALE_PASS} repo.treescale.com
+              docker push repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front
             fi
