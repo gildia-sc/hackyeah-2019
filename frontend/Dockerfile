@@ -1,6 +1,6 @@
 FROM node:10
 
-COPY build .
+COPY build build
 
 EXPOSE 8000
 
