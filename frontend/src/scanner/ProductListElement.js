@@ -5,22 +5,22 @@ import {productDetected} from "./ScannerReducer";
 import {useDispatch} from "react-redux";
 
 function ProductListElement({product}) {
-    console.log(product);
     const dispatch = useDispatch();
-    return (
-        <div>
-            <Grid item>
-                <Link to={"/product/" + product.ean} onClick={() => dispatch(productDetected(product.ean))}>
-                    <img src={"/demo-ean-codes/test_barcode_" + product.ean + "_300x169.jpg"}
-                         alt={"Click to select '" + product.name + "'"}/>
-                </Link>
-            </Grid>
-
-            {
-                product.name
-            }
-        </div>
+    return product.found ? (
+        <Grid item>
+            <Link to={"/product/" + product.ean} onClick={() => dispatch(productDetected(product.ean))}>
+                {product.name}
+            </Link>
+        </Grid>
+    ) : (
+        <Grid item>
+            {product.ean}  not found
+            <Link to={"/product/" + product.ean} >
+            Add new product
+            </Link>
+        </Grid>
     )
+
 }
 
 export default ProductListElement
