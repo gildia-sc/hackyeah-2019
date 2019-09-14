@@ -6,5 +6,14 @@
     "logo": "http://www.plasticexpert.co.uk/wp-content/uploads/2014/07/images.jpg",
     "recyclePotential": 30,
     "timeToBiodegradateInDays": 365
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
+    "id": 2,
+    "code": "Paper",
+    "logo": "https://cdn3.vectorstock.com/i/1000x1000/76/07/conceptual-recycling-paper-recycle-sign-icon-vector-17677607.jpg",
+    "recyclePotential": 100,
+    "timeToBiodegradateInDays": 14
   }
+
 ]

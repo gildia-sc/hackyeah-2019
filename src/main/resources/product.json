@@ -92,5 +92,44 @@
       "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
       "id": 1
     }
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Product",
+    "id": 4,
+    "ean": "8595611702907",
+    "name": "USB-C Metal Nano Docking Station 4K HDMI LAN",
+    "image": "https://i-tec.cz/wp-content/uploads/C31NANODOCKLANPD_JL-1.jpg",
+    "productType" : "deprecated",
+    "productWeight": 87000,
+    "packageWeight": 12000,
+    "productDurability": "3 years",
+    "latitude": 49.829140,
+    "longitude": 18.260060,
+    "lca": 78,
+    "category": {
+      "_class": "pl.hackyeah2019.hackyeah.product.Category",
+      "id": 3
+    },
+    "ecoLabel": [{
+      "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+      "id": 4
+    },
+      {
+        "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+        "id": 5
+      },
+      {
+        "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+        "id": 6
+      }
+    ],
+    "company": {
+      "_class": "pl.hackyeah2019.hackyeah.product.Company",
+      "id": 4
+    },
+    "packageMaterial": {
+      "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
+      "id": 1
+    }
   }
 ]

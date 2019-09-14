@@ -10,5 +10,11 @@
     "id": 2,
     "name": "Gums",
     "description": "Chewing gum is a soft, cohesive substance designed to be chewed without being swallowed. Modern chewing gum is composed of gum base, sweeteners, softeners/plasticizers, flavors, colors, and, typically, a hard or powdered polyol coating."
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Category",
+    "id": 3,
+    "name": "Laptop accessories",
+    "description": "Accessories such as a keyboard and mouse may be essential in order to operate your computer.Others - such as graphics tablets and barcode readers - may be useful for specialist tasks. Computer accessories are also called computer peripherals and can include printers and scanners and storage devices."
   }
 ]

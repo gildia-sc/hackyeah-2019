@@ -20,6 +20,12 @@
     "name": "Perfetti Van Melle Polska Sp. z o.o.",
     "logo": "https://static.goldenline.pl/firm_logo/120/firm_11128_c0bdee_small200.jpg",
     "rating": 7
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Company",
+    "id": 4,
+    "name": "i-tec Technologies s.r.o.",
+    "logo": "https://media.licdn.com/dms/image/C560BAQGD-y0ni_KkAw/company-logo_200_200/0?e=2159024400&v=beta&t=WNhH4-8Gch2PCJAv9Teqbx5n_f45wGB4bDdmHJTQzAM",
+    "rating": 5
   }
-
 ]
