@@ -3,6 +3,7 @@ import './App.css';
 import ProductScannerView from "./scanner/ProductScannerView";
 import ProductDetailsView from "./product/ProductDetalisView";
 import DemoEanCodesView from "./demo/DemoEanCodesView";
+import SendNewProductView from "./send-new/SendNewProductView";
 
 import {BrowserRouter as Router, Route} from "react-router-dom"
 import AppBar from '@material-ui/core/AppBar';
@@ -22,6 +23,7 @@ function App() {
                 <Route exact path="/" component={ProductScannerView}/>
                 <Route path="/product/:ean" component={ProductDetailsView}/>
                 <Route path="/demo-ean-codes" component={DemoEanCodesView}/>
+                <Route path="/send-new-product/:ean" component={SendNewProductView}/>
             </div>
         </Router>
     );

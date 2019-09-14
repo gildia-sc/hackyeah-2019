@@ -15,7 +15,7 @@ function ProductListElement({product}) {
     ) : (
         <Grid item>
             {product.ean}  not found
-            <Link to={"/product/" + product.ean} >
+            <Link to={"/send-new-product/" + product.ean} >
             Add new product
             </Link>
         </Grid>
