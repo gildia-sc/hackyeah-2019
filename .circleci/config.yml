@@ -25,6 +25,7 @@ jobs:
     steps:
       - checkout
       - run: |
+          cd frontend
           yarn build
           docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front .
       - deploy:
