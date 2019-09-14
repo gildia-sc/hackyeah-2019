@@ -48,5 +48,12 @@
     "name": "Optimal Care S.A.",
     "logo": "https://www.wabel.com/sites/all/custom/resources/company/300/13802/71b045d00975ac02f4e02e78f9fb8d5bb901bb82926553662.jpg",
     "rating": 7
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Company",
+    "id": 8,
+    "name": "Mondelez Polska S.A.",
+    "logo": "https://d-art.ppstatic.pl/kadry/k/r/16/6d/518a3f260a501_o_large.jpg",
+    "rating": 9
   }
 ]
