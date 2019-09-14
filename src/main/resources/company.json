@@ -41,5 +41,12 @@
     "name": "TOP-2 Fabryka Chusteczek S.A.",
     "logo": "http://www.chusteczki.com.pl/images/logo.jpg",
     "rating": 6
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Company",
+    "id": 7,
+    "name": "Optimal Care S.A.",
+    "logo": "https://www.wabel.com/sites/all/custom/resources/company/300/13802/71b045d00975ac02f4e02e78f9fb8d5bb901bb82926553662.jpg",
+    "rating": 7
   }
 ]

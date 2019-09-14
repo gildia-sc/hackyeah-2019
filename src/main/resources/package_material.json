@@ -30,5 +30,16 @@
     "logo": "https://daloplast.se/wp-content/uploads/2015/12/LDPE_04.png",
     "recyclePotential": 60,
     "timeToBiodegradateInDays": 365000
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
+    "id": 5,
+    "code": "7 Other",
+    "logo": "https://image.shutterstock.com/image-photo/image-260nw-1459165832.jpg",
+    "recyclePotential": 20,
+    "timeToBiodegradateInDays": 91
   }
 ]
+
+
+
