@@ -1,5 +1,5 @@
 import React, {useEffect, memo} from 'react';
-import { BrowserBarcodeReader, NotFoundException, ChecksumException, FormatException } from '@zxing/library';
+import { BrowserBarcodeReader, NotFoundException, ChecksumException, FormatException, BarcodeFormat, DecodeHintType } from '@zxing/library';
 import {useDispatch} from "react-redux";
 import {productDetected, scannigStarted} from "./ScannerReducer";
 
@@ -8,7 +8,12 @@ const Scanner = memo(() => {
     useEffect(() => {
 	    let selectedDeviceId;
             dispatch(scannigStarted())
+	    const hints = new Map();
+            const formats = [BarcodeFormat.EAN_13, BarcodeFormat.EAN_8];
+            hints.set(DecodeHintType.POSSIBLE_FORMATS, formats);
+
 	    const codeReader = new BrowserBarcodeReader()
+	    codeReader.setHints(hints)
 	    console.log('ZXing code reader initialized')
 	    codeReader.getVideoInputDevices()
                 .then((videoInputDevices) => {
