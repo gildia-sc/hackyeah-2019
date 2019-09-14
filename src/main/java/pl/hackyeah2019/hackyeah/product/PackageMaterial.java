@@ -20,5 +20,5 @@ public class PackageMaterial {
     private String logo;
     private String recyclePotential;
     private Boolean reusable;
-    private Duration timeToBiodegradate;
+    private Integer timeToBiodegradateInDays;
 }
