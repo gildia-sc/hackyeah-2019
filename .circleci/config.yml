@@ -24,11 +24,24 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
+      - setup_remote_docker:
+            docker_layer_caching: true
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: cd frontend && yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
       - run:
           name: Build frontend Docker image
           command: |
             cd frontend
-            yarn
             docker build -t repo.treescale.com/${TREESCALE_USER}/hackyeah:2019-front .
       - deploy:
           name: Push app docker image to registry
