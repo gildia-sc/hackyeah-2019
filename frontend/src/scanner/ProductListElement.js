@@ -1,7 +1,7 @@
 import React from 'react';
 
-function ProductListElement(product) {
-
+function ProductListElement({product}) {
+    console.log(product)
     return (
         < div>
             {
