@@ -21,7 +21,7 @@ function Scanner() {
             },
             numOfWorkers: 2,
             decoder: {
-                readers: ["code_128_reader"]
+                readers: ["code_128_reader", "ean_reader", "ean_8_reader"]
             },
             locate: true
         }, (err) => {
