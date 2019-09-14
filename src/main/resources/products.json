@@ -11,6 +11,10 @@
     "productDurability": "10 times",
     "latitude": 53.12,
     "longitude": 44.14,
-    "lca": 10.05
+    "lca": 10.05,
+    "category": {
+      "_class": "pl.hackyeah2019.hackyeah.product.Category",
+      "id": 1
+    }
   }
 ]
