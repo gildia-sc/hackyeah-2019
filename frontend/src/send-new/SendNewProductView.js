@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { withRouter } from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 import Grid from '@material-ui/core/Grid';
 
 import Camera from 'react-html5-camera-photo';
@@ -10,7 +10,6 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Button from "@material-ui/core/Button";
-import Snackbar from "@material-ui/core/Snackbar";
 
 function SendNewProductView({history, match}) {
 
@@ -23,7 +22,7 @@ function SendNewProductView({history, match}) {
     });
 
     function onTakePhoto(dataUri) {
-        const PhotoImage = <img src={`${dataUri}`} width={100} />
+        const PhotoImage = <img src={`${dataUri}`} width={100} alt="Product" />
         setPhotos([PhotoImage, ...photos]);
     }
 
