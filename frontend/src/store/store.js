@@ -1,5 +1,22 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import productScanner from "../scanner/ScannerReducer";
 import {composeWithDevTools} from 'redux-devtools-extension';
+import {productSaga} from "../product/ProductSaga";
+import {scannerSaga} from "../scanner/ScannerSaga";
+import {all} from 'redux-saga/effects'
+import createSagaMiddleware from 'redux-saga'
 
-export default createStore(combineReducers({productScanner}), composeWithDevTools(applyMiddleware()));
+const sagaMiddleware = createSagaMiddleware();
+
+export default createStore(combineReducers({productScanner, scannerSaga}),
+    composeWithDevTools(applyMiddleware(sagaMiddleware)));
+
+
+function* sagas() {
+    yield all([
+        productSaga(),
+        scannerSaga()
+    ])
+}
+
+sagaMiddleware.run(sagas);

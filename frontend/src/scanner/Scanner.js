@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import Quagga from 'quagga';
 import {useDispatch} from "react-redux";
-import {productDetected, scannigEnded, scannigStarted} from "./ScannerReducer";
+import {productDetected, scannigStarted} from "./ScannerReducer";
 
 function Scanner() {
     const dispatch = useDispatch();
@@ -31,7 +31,7 @@ function Scanner() {
             Quagga.start();
             dispatch(scannigStarted())
         });
-        Quagga.onDetected((x) => console.log("XD", x) || dispatch(productDetected(x.codeResult.code)));
+        Quagga.onDetected((x) => dispatch(productDetected(x.codeResult.code)));
     });
     return <div id="interactive" className="viewport"/>
 }
