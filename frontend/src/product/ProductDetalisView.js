@@ -70,7 +70,7 @@ function ProductDetailsView({history, match}) {
         return product.productWeight + product.packageWeight;
     }
     function getGeneratedWasteScore(product) {
-        return getProductAndPackageWeight(product) / product.productWeight * 100 - 100;
+        return (getProductAndPackageWeight(product) / product.productWeight * 100 - 100).toFixed(2) ;
     }
     function humanizeDate(days) {
         return humanizer(days*24*60*60*1000);
@@ -120,7 +120,7 @@ function ProductDetailsView({history, match}) {
                         <Grid container direction="column" justify="flex-end" alignItems="center" >
                             <Typography variant="h5" component="h3">Package</Typography><br />
                                 <Grid item xs={6}><Typography variant="caption" display="block" gutterBottom classes={classes.margin_top}>Weight %</Typography></Grid>
-                                    <Grid item xs={6}>{getGeneratedWasteScore(product)}%</Grid>
+                                    <Grid item xs={6}>{getGeneratedWasteScore(product)} %</Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Type</Typography></Grid>
                                     <Grid item xs={6}><img src={product.packageMaterial.logo} width="40" height="40"/></Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Recycle potential</Typography></Grid>
