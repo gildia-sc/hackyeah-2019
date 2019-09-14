@@ -27,5 +27,12 @@
     "name": "i-tec Technologies s.r.o.",
     "logo": "https://media.licdn.com/dms/image/C560BAQGD-y0ni_KkAw/company-logo_200_200/0?e=2159024400&v=beta&t=WNhH4-8Gch2PCJAv9Teqbx5n_f45wGB4bDdmHJTQzAM",
     "rating": 5
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Company",
+    "id": 5,
+    "name": "PKN Orlen S.A. ",
+    "logo": "http://siodma9.pl/media/k2/items/cache/600085de8ec319c3ad7a50be991624bf_XL.jpg",
+    "rating": 9
   }
 ]

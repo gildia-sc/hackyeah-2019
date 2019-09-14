@@ -131,5 +131,35 @@
       "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
       "id": 1
     }
+  },
+  {
+    "_class": "pl.hackyeah2019.hackyeah.product.Product",
+    "id": 5,
+    "ean": "5906395781584",
+    "name": "Sok Tloczony Jablkowo Gruszkowy",
+    "image": "http://www.vitay.pl/files/Prizes/2378/2876_450_450.jpg",
+    "productType" : "deprecated",
+    "productWeight": 500000,
+    "packageWeight": 170000,
+    "productDurability": "Not available",
+    "latitude": 52.584780,
+    "longitude": 19.651620,
+    "lca": 32,
+    "category": {
+      "_class": "pl.hackyeah2019.hackyeah.product.Category",
+      "id": 4
+    },
+    "ecoLabel": [{
+      "_class": "pl.hackyeah2019.hackyeah.product.EcoLabel",
+      "id": 7
+    }],
+    "company": {
+      "_class": "pl.hackyeah2019.hackyeah.product.Company",
+      "id": 5
+    },
+    "packageMaterial": {
+      "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
+      "id": 3
+    }
   }
 ]
