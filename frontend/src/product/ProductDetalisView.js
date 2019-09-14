@@ -33,16 +33,11 @@ function ProductDetailsView({history, match}) {
                     <Grid item xs={6}>Weight with packaging:</Grid>
                     <Grid item xs={6}>{product.productWeight} + {product.packageWeight}</Grid>
                     <Grid item xs={6}>Package material type:</Grid>
-                    <Grid item xs={6}>
-                        {product.packageMaterial.code}
-                    </Grid>
+                    <Grid item xs={6}>{product.packageMaterial.code}</Grid>
                     <Grid item xs={6}>Package material recycling percent:</Grid>
-                    <Grid item xs={6}>
-                        {product.packageMaterial.recyclePotential}</Grid>
+                    <Grid item xs={6}>{product.packageMaterial.recyclePotential}</Grid>
                     <Grid item xs={6}>Package biodegradate time:</Grid>
-                    <Grid item xs={6}>
-                        {product.packageMaterial.timeToBiodegradateInDays} (days)}
-                    </Grid>
+                    <Grid item xs={6}>{product.packageMaterial.timeToBiodegradateInDays} (days)</Grid>
                 </Grid>
             )}
         </>)
