@@ -1,2 +1,3 @@
-category_id,name,description,
-1,ciastka,"A cookie is a baked or cooked food that is typically small, flat and sweet. It usually contains flour, sugar and some type of oil or fat. It may include other ingredients such as raisins, oats, chocolate chips, nuts, etc. Some cookies may also be named by their shape, such as date squares or bars.",
+category_id,name,description
+1,cookie,"A cookie is a baked or cooked food that is typically small, flat and sweet. It usually contains flour, sugar and some type of oil or fat. It may include other ingredients such as raisins, oats, chocolate chips, nuts, etc. Some cookies may also be named by their shape, such as date squares or bars."
+2,gums,"Chewing gum is a soft, cohesive substance designed to be chewed without being swallowed. Modern chewing gum is composed of gum base, sweeteners, softeners/plasticizers, flavors, colors, and, typically, a hard or powdered polyol coating."
