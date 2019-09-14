@@ -2,8 +2,8 @@ import {fetchProduct} from "../product/ProductReducer";
 import {put, takeEvery} from 'redux-saga/effects'
 
 
-function* onProductDetected() {
-    yield put(fetchProduct())
+function* onProductDetected(action) {
+    yield put(fetchProduct(action.ean))
 }
 
 export function* scannerSaga() {

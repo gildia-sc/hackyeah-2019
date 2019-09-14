@@ -5,6 +5,7 @@ import {useSelector} from "react-redux";
 function ProductScannerView() {
     const product = useSelector(state => state.productScanner);
     const [start, setStart] = useState(false);
+
     return (
         <>
             {product}

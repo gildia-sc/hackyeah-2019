@@ -10,6 +10,6 @@ export default (state = {product: {}, error: null, isFetching: false}, action) =
             return state
     }
 }
-export const fetchProduct = () => ({type: 'FETCH_PRODUCT'});
+export const fetchProduct = (ean) => ({type: 'FETCH_PRODUCT', ean});
 export const fetchProductSuccess = (product) => ({type: 'FETCH_PRODUCT_SUCCESS', product});
 export const fetchProductFailure = (error) => ({type: 'FETCH_PRODUCT_FAILURE', error});
