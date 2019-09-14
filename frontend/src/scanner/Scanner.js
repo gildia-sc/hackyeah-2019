@@ -25,7 +25,7 @@ const Scanner = memo(() => {
                     console.error(err)
                 })
     });
-    return <div id="interactive" className="viewport"><video id="video" width="600" height="400" style={{border: "1px solid gray"}} autoPlay={true} muted={true} playsInline={true}></video></div>
+    return <div id="interactive" className="viewport"><video id="video" width="100%" height="400" style={{border: "1px solid gray"}} autoPlay={true} muted={true} playsInline={true}></video></div>
 })
 
 export default Scanner
