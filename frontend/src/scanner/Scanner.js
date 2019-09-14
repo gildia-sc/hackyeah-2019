@@ -13,11 +13,11 @@ function Scanner() {
 	    codeReader.getVideoInputDevices()
                 .then((videoInputDevices) => {
                     selectedDeviceId = videoInputDevices[0].deviceId
-                    codeReader.decodeOnceFromVideoDevice(selectedDeviceId, 'video').then((result) => {
-			console.log(result)
-			dispatch(productDetected(result.text));
-                    }).catch((err) => {
-                        console.error(err)
+                    codeReader.decodeFromInputVideoDeviceContinuously(selectedDeviceId, 'video', (result) => {
+			if (result != null) {
+			    console.log(result)
+			    dispatch(productDetected(result.text));
+			}
                     })
                     console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
                 })
