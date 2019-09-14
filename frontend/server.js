@@ -17,7 +17,7 @@ app.get('/', function(req, res) {
 
 var httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(3000, 'localhost', (err) => {
+httpsServer.listen(443, 'localhost', (err) => {
     if (err) {
         console.log(err);
         return;
