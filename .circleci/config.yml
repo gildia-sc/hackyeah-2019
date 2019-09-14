@@ -26,13 +26,16 @@ jobs:
       - checkout
       - setup_remote_docker:
             docker_layer_caching: true
+      - run:
+          - name: Change folder to 'frontend'
+          - command: cd frontend
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install Dependencies
-          command: cd frontend && yarn install --frozen-lockfile
+          command: yarn install --frozen-lockfile
       - save_cache:
           name: Save Yarn Package Cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
