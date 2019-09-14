@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import Scanner from "./Scanner";
 import {useSelector} from "react-redux";
 
+import Button from '@material-ui/core/Button';
+
 function ProductScannerView() {
     const product = useSelector(state => state.productScanner);
     const [start, setStart] = useState(false);
@@ -10,7 +12,7 @@ function ProductScannerView() {
         <>
             {product}
             {!start ?
-                <button onClick={() => setStart(true)}>Start scanning</button> :
+                <Button variant="contained" color="primary" onClick={() => setStart(true)}>Start scanning</Button> :
                 <Scanner/>
             }
         </>)
