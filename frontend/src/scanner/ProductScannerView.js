@@ -15,7 +15,6 @@ function ProductScannerView() {
             <div>
                 {products.map((product, id) => <ProductListElement product={product} key={id} betterProduct={betterProducts[product.ean]} />)}
             </div>
-            <BetterProductDialog/>
         </>)
 }
 
