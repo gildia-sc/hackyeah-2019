@@ -10,22 +10,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import NewProductSentView from "./send-new/NewProductSentView";
-<<<<<<< HEAD
-import SvgIcon from '@material-ui/core/SvgIcon';
-
-function HomeIcon(props) {
-  return (
-    <a href="/">
-    <SvgIcon {...props}>
-      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-    </SvgIcon>
-    </a>
-  );
-}
-=======
 import IconButton from "@material-ui/core/IconButton";
 import HomeIcon from '@material-ui/icons/Home';
->>>>>>> Ikonka "Home" w nawigacji
 
 function App() {
     return (
