@@ -9,10 +9,10 @@ function DemoEanCodesView() {
     return (
         <div>
             <Grid container spacing={3} direction="column" alignItems="center" justify="center">
-                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('8595611702907'))}><img src="/demo-ean-codes/test_barcode_8595611702907_300x169.jpg" alt="Click to select 8595611702907" /></Link></Grid>
-                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5907700061223'))}><img src="/demo-ean-codes/test_barcode_5907700061223_300x169.jpg" alt="Click to select 5907700061223"  /></Link></Grid>
-                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('80762386'))}><img src="/demo-ean-codes/test_barcode_80762386_300x169.jpg" alt="Click to select 80762386"  /></Link></Grid>
-                <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5904825010051'))}><img src="/demo-ean-codes/test_barcode_5904825010051_300x169.jpg" alt="Click to select 5904825010051"  /></Link></Grid>
+                <Grid item>Product<br /><Link to="/" onClick={()=>dispatch(productDetected('8595611702907'))}><img src="/demo-ean-codes/test_barcode_8595611702907_300x169.jpg" alt="Click to select 8595611702907" /></Link></Grid>
+                <Grid item>Missing product<br /><Link to="/" onClick={()=>dispatch(productDetected('5907700061223'))}><img src="/demo-ean-codes/test_barcode_5907700061223_300x169.jpg" alt="Click to select 5907700061223"  /></Link></Grid>
+                <Grid item>EAN 8<br /><Link to="/" onClick={()=>dispatch(productDetected('80762386'))}><img src="/demo-ean-codes/test_barcode_80762386_300x169.jpg" alt="Click to select 80762386"  /></Link></Grid>
+                <Grid item>Product with better alternative<br /><Link to="/" onClick={()=>dispatch(productDetected('5904825010051'))}><img src="/demo-ean-codes/test_barcode_5904825010051_300x169.jpg" alt="Click to select 5904825010051"  /></Link></Grid>
                 <Grid item><Link to="/" onClick={()=>dispatch(productDetected('3245678599730'))}><img src="/demo-ean-codes/test_barcode_3245678599730_300x169.jpg" alt="Click to select 3245678599730"  /></Link></Grid>
                 <Grid item><Link to="/" onClick={()=>dispatch(productDetected('5906395781584'))}><img src="/demo-ean-codes/test_barcode_5906395781584_300x169.jpg" alt="Click to select 5906395781584"  /></Link></Grid>
                 <Grid item><Link to="/" onClick={()=>dispatch(productDetected('7622210310361'))}><img src="/demo-ean-codes/test_barcode_7622210310361_300x169.jpg" alt="Click to select 7622210310361"  /></Link></Grid>
