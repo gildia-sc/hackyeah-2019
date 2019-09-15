@@ -11,5 +11,5 @@ export default (state = {product: null, error: null, isFetching: false, query: {
     }
 }
 export const fetchBetterProduct = (query) => ({type: 'FETCH_BETTER_PRODUCT', query});
-export const fetchBetterProductSuccess = (product) => ({type: 'FETCH_BETTER_PRODUCT_SUCCESS', product});
+export const fetchBetterProductSuccess = (ean, targetProduct) => ({type: 'FETCH_BETTER_PRODUCT_SUCCESS', ean, targetProduct});
 export const fetchBetterProductFailure = (error) => ({type: 'FETCH_BETTER_PRODUCT_FAILURE', error});

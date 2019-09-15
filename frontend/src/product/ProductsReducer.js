@@ -1,4 +1,4 @@
-export default (state = {products: [], error: null, isFetching: false}, action) => {
+export default (state = {products: [], error: null, isFetching: false, betterProducts: {}}, action) => {
     switch (action.type) {
         case 'FETCH_PRODUCT':
             return {...state, isFetching: true};
@@ -8,6 +8,10 @@ export default (state = {products: [], error: null, isFetching: false}, action) 
             return {...state, isFetching: false, error: action.error.toString()};
         case 'PRODUCT_NOT_FOUND':
             return {...state, isFetching: false, products: combine(state.products, decorateNotFound(action.ean))};
+        case 'FETCH_BETTER_PRODUCT_SUCCESS':
+            console.log('Reducer')
+            console.log(action)
+            return {...state, isFetching: false, betterProducts: {...state.betterProducts, [action.ean]: action.targetProduct}};
         default:
             return state
     }

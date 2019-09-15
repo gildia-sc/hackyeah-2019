@@ -5,7 +5,7 @@ import {fetchBetterProductFailure, fetchBetterProductSuccess} from "./BetterProd
 function* onBetterProductFetch(action) {
     try {
         const product = yield call(BetterProductApi.get, action.query.category.name, action.query.score);
-        yield put(fetchBetterProductSuccess(product));
+        yield put(fetchBetterProductSuccess(action.query.ean, product));
     } catch (error) {
         yield put(fetchBetterProductFailure(error));
     }
