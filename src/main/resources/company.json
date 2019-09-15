@@ -4,7 +4,7 @@
     "id": 1,
     "name": "Bahisen Polska",
     "logo": "https://static.wirtualnemedia.pl/media/top/Bahlsen-logo655.png",
-    "rating": 2
+    "rating": 37
   },
 
   {
@@ -12,48 +12,48 @@
     "id": 2,
     "name": "Secpol Sp. z o.o.",
     "logo": "http://www.memorialbercika.pl/zdjecia_sponsorzy/116.jpg",
-    "rating": 3
+    "rating": 57
   },
   {
     "_class": "pl.hackyeah2019.hackyeah.product.Company",
     "id": 3,
     "name": "Perfetti Van Melle Polska Sp. z o.o.",
     "logo": "https://static.goldenline.pl/firm_logo/120/firm_11128_c0bdee_small200.jpg",
-    "rating": 7
+    "rating": 89
   },
   {
     "_class": "pl.hackyeah2019.hackyeah.product.Company",
     "id": 4,
     "name": "i-tec Technologies s.r.o.",
     "logo": "https://media.licdn.com/dms/image/C560BAQGD-y0ni_KkAw/company-logo_200_200/0?e=2159024400&v=beta&t=WNhH4-8Gch2PCJAv9Teqbx5n_f45wGB4bDdmHJTQzAM",
-    "rating": 5
+    "rating": 78
   },
   {
     "_class": "pl.hackyeah2019.hackyeah.product.Company",
     "id": 5,
     "name": "PKN Orlen S.A. ",
     "logo": "http://siodma9.pl/media/k2/items/cache/600085de8ec319c3ad7a50be991624bf_XL.jpg",
-    "rating": 9
+    "rating": 49
   },
   {
     "_class": "pl.hackyeah2019.hackyeah.product.Company",
     "id": 6,
     "name": "TOP-2 Fabryka Chusteczek S.A.",
     "logo": "http://www.chusteczki.com.pl/images/logo.jpg",
-    "rating": 6
+    "rating": 37
   },
   {
     "_class": "pl.hackyeah2019.hackyeah.product.Company",
     "id": 7,
     "name": "Optimal Care S.A.",
     "logo": "https://www.wabel.com/sites/all/custom/resources/company/300/13802/71b045d00975ac02f4e02e78f9fb8d5bb901bb82926553662.jpg",
-    "rating": 7
+    "rating": 28
   },
   {
     "_class": "pl.hackyeah2019.hackyeah.product.Company",
     "id": 8,
     "name": "Mondelez Polska S.A.",
     "logo": "https://d-art.ppstatic.pl/kadry/k/r/16/6d/518a3f260a501_o_large.jpg",
-    "rating": 9
+    "rating": 56
   }
 ]
