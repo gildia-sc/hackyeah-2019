@@ -41,7 +41,7 @@ function ProductDetailsView({history, match}) {
 
     useEffect(() => {
         product || dispatch(fetchProduct(ean))
-    }, [ean])
+    }, [ean, dispatch, product])
     const productScoring = product ? product.score : 0
 
       React.useEffect(() => {
@@ -61,7 +61,7 @@ function ProductDetailsView({history, match}) {
                   clearInterval(timer);
              };
         }
-      }, [productScoring]);
+      }, [productScoring, scoring]);
 
     function getProductAndPackageWeight(product) {
         return product.productWeight + product.packageWeight;
@@ -96,7 +96,7 @@ function ProductDetailsView({history, match}) {
                         </Grid>
 
                     </Grid>
-                    <Grid item xs={12}><img src={product.image} style={{display: "block",
+                    <Grid item xs={12}><img alt="" src={product.image} style={{display: "block",
                                                                         "marginLeft": "auto",
                                                                         "marginRight": "auto",
                                                                         width: "50%"}}/></Grid>
@@ -104,7 +104,7 @@ function ProductDetailsView({history, match}) {
                         <Grid container direction="column" justify="flex-end" alignItems="center">
                             <Typography variant="h5" component="h4">Product</Typography><br />
                                 <Grid item xs={6}><Typography variant="caption" display="block" gutterBottom>Company</Typography></Grid>
-                                    <Grid item xs={6}><img src={product.company.logo} width="40" height="40"/></Grid>
+                                    <Grid item xs={6}><img alt="" src={product.company.logo} width="40" height="40"/></Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Category</Typography></Grid>
                                     <Grid item xs={6}>{product.category.name}</Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Weight</Typography></Grid>
@@ -119,7 +119,7 @@ function ProductDetailsView({history, match}) {
                                 <Grid item xs={6}><Typography variant="caption" display="block" gutterBottom>Weight %</Typography></Grid>
                                     <Grid item xs={6}>{getGeneratedWasteScore(product)} %</Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Type</Typography></Grid>
-                                    <Grid item xs={6}><img src={product.packageMaterial.logo} width="40" height="40"/></Grid>
+                                    <Grid item xs={6}><img alt="" src={product.packageMaterial.logo} width="40" height="40"/></Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Recycle potential</Typography></Grid>
                                     <Grid item xs={6}>{product.packageMaterial.recyclePotential} %</Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Biodegradate time</Typography></Grid>

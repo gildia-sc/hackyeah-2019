@@ -1,4 +1,4 @@
-import {call, put, select, takeLatest} from 'redux-saga/effects'
+import {call, put, takeLatest} from 'redux-saga/effects'
 import BetterProductApi from "../better_product/BetterProductApi"
 import {fetchBetterProductFailure, fetchBetterProductSuccess} from "./BetterProductReducer"
 
