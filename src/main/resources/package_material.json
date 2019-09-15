@@ -21,7 +21,7 @@
     "code": "Glass",
     "logo": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0003/4707/brand.gif?itok=gAnPFe3Q",
     "recyclePotential": 100,
-    "timeToBiodegradateInDays": 365000000
+    "timeToBiodegradateInDays": 36525000
   },
   {
     "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
@@ -29,7 +29,7 @@
     "code": "PE-LD",
     "logo": "https://daloplast.se/wp-content/uploads/2015/12/LDPE_04.png",
     "recyclePotential": 60,
-    "timeToBiodegradateInDays": 365000
+    "timeToBiodegradateInDays": 365250
   },
   {
     "_class": "pl.hackyeah2019.hackyeah.product.PackageMaterial",
@@ -37,7 +37,7 @@
     "code": "7 Other",
     "logo": "https://image.shutterstock.com/image-photo/image-260nw-1459165832.jpg",
     "recyclePotential": 20,
-    "timeToBiodegradateInDays": 91
+    "timeToBiodegradateInDays": 92
   }
 ]
 
