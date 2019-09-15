@@ -90,7 +90,7 @@ function ProductDetailsView({history, match}) {
                         >
 
                           <Grid item xs={3}>
-                            Score: {scoring}
+                            Score: {scoring} pts
                           </Grid>
 
                         </Grid>

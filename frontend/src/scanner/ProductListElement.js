@@ -5,53 +5,136 @@ import {Link} from "react-router-dom";
 import {productDetected} from "./ScannerReducer";
 import {useDispatch} from "react-redux";
 import Button from "@material-ui/core/Button";
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import ButtonBase from '@material-ui/core/ButtonBase';
+import Avatar from '@material-ui/core/Avatar';
+import Chip from '@material-ui/core/Chip';
+import FaceIcon from '@material-ui/icons/Face';
+import DoneIcon from '@material-ui/icons/Done';
 
 function ProductListElement({history, product, betterProduct}) {
     const dispatch = useDispatch();
-    return product.found ? (
-        <Grid container spacing={3}>
-            <Grid item xs={2}>
-                {product.ean}
-            </Grid>
-            <Grid item xs={3}>
-                {product.name}
-            </Grid>
-            <Grid item xs={3}>
-                {betterProduct && (
-                    <Button variant="contained" color="primary" onClick={() => history.push("/product/" + betterProduct.ean)}>
-                        Better
-                    </Button>
-                )}
-            </Grid>
-            <Grid item xs={1}>
-                {product.score}
-            </Grid>
-            <Grid item xs={3}>
-                <Button variant="contained" color="primary" onClick={() => history.push("/product/" + product.ean)}>
-                    Show details
-                </Button>
-            </Grid>
-        </Grid>
-    ) : (
-        <Grid container spacing={3}>
-            <Grid item xs={2}>
-                {product.ean}
-            </Grid>
-            <Grid item xs={3}>
-                (product not found)
-            </Grid>
-            <Grid item xs={3}>
+    const useStyles = makeStyles(theme => ({
+      root: {
+        flexGrow: 1,
+      },
+      paper: {
+        padding: theme.spacing(2),
+        margin: 'auto',
+        maxWidth: 500,
+      },
+      image: {
+        width: 128,
+        height: 128,
+      },
+      img: {
+        margin: 'auto',
+        display: 'block',
+        maxWidth: '100%',
+        maxHeight: '100%',
+      },
+      chip: {
+          margin: theme.spacing(1),
+        }
+    }));
+    const classes = useStyles();
 
-            </Grid>
-            <Grid item xs={1}>
-                -
-            </Grid>
-            <Grid item xs={3}>
-                <Button variant="contained" color="secondary" onClick={() => history.push("/send-new-product/" + product.ean)}>
-                    Send product
-                </Button>
-            </Grid>
-        </Grid>
+    return product.found ? (
+    <div>
+        <div className={classes.root}>
+              <Paper className={classes.paper} onClick={() => { history.push("/product/" + product.ean)}}>
+                <Grid container spacing={2}>
+                  <Grid item>
+                    <ButtonBase className={classes.image}>
+                      <img className={classes.img} alt="complex" src={product.image} />
+                    </ButtonBase>
+                  </Grid>
+                  <Grid item xs={12} sm container>
+                    <Grid item xs container direction="column" spacing={2}>
+                      <Grid item xs>
+                        <Typography gutterBottom variant="subtitle1">
+                          {product.name.slice(0,32)}
+                        </Typography>
+                        <Typography variant="body2" gutterBottom>
+                          {product.category.name}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary">
+                          EAN: {product.ean}
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        {betterProduct && (
+                                    <Chip
+                                            icon={<FaceIcon />}
+                                            label="Found better product"
+                                            clickable
+                                            className={classes.chip}
+                                            color="primary"
+                                            deleteIcon={<DoneIcon />}
+                                            onClick={(e) => {
+                                                history.push("/product/" + betterProduct.ean);
+                                                e.stopPropagation();
+                                                e.preventDefault()}}
+                                          />
+                                        )}
+                      </Grid>
+                    </Grid>
+                    <Grid item>
+                      <Typography variant="subtitle1">{product.score} pts</Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Paper>
+            </div>
+        </div>
+    ) : (
+    <div>
+        <div className={classes.root}>
+                      <Paper className={classes.paper}>
+                        <Grid container spacing={2}>
+                          <Grid item>
+                            <ButtonBase className={classes.image}>
+
+                            </ButtonBase>
+                          </Grid>
+                          <Grid item xs={12} sm container>
+                            <Grid item xs container direction="column" spacing={2}>
+                              <Grid item xs>
+                                <Typography gutterBottom variant="subtitle1">
+                                  We do not have this product
+                                </Typography>
+                                <Typography variant="body2" gutterBottom>
+                                  in our database yet :(
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary">
+                                  EAN: {product.ean}
+                                </Typography>
+                              </Grid>
+                              <Grid item>
+                                <Chip
+                                                                            icon={<FaceIcon />}
+                                                                            label="Send us more info plz"
+                                                                            clickable
+                                                                            className={classes.chip}
+                                                                            color="primary"
+                                                                            deleteIcon={<DoneIcon />}
+                                                                            onClick={(e) => {
+                                                                                history.push("/send-new-product/" + product.ean);
+                                                                                e.stopPropagation();
+                                                                                e.preventDefault()}}
+                                                                          />
+                              </Grid>
+                            </Grid>
+                            <Grid item>
+                              <Typography variant="subtitle1">? pts</Typography>
+                            </Grid>
+                          </Grid>
+                        </Grid>
+                      </Paper>
+                    </div>
+                </div>
     )
 
 }
