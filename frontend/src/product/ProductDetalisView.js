@@ -72,6 +72,10 @@ function ProductDetailsView({history, match}) {
     function humanizeDate(days) {
         return humanizer(days*24*60*60*1000);
     }
+    function calculateDistance(product) {
+        // TODO: calculate basing on GPS coordinate
+        return Math.round(product.longitude * 100);
+    }
     return (
         <>
             { product && (
@@ -110,7 +114,7 @@ function ProductDetailsView({history, match}) {
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Weight</Typography></Grid>
                                     <Grid item xs={6}>{getProductAndPackageWeight(product)} mg</Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Shipping distance</Typography></Grid>
-                                    <Grid item xs={6}>TODO: {product.latitude} / {product.longitude}</Grid>
+                                    <Grid item xs={6}>{calculateDistance(product)}</Grid>
                          </Grid>
                     </Grid>
                      <Grid item xs={6} >
