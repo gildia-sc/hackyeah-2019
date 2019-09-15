@@ -2,6 +2,8 @@
 
 ![Screenshot](https://github.com/gildia-sc/hackyeah-2019/blob/master/20190915_110711.jpg)
 
+Video - https://youtu.be/Q_cqIa-cJ9g
+
 “Consumers not only have a right to choose, they have the right to know what they are choosing”
 
 It’s the little choices that makes the difference. Do you really make conscious decisions about what you buy and how it affects environment? Did you know there are over 400 ecolabels over the world? I bet you don’t know even half of them. Our app keep you informed. In shop you scan product barcode and see ecological scoring for product. That’s way you can compare it to other product which satisfies the same need. And choose the more Eco one 
