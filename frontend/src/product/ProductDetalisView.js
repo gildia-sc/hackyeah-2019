@@ -114,7 +114,7 @@ function ProductDetailsView({history, match}) {
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Weight</Typography></Grid>
                                     <Grid item xs={6}>{getProductAndPackageWeight(product)} mg</Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Shipping distance</Typography></Grid>
-                                    <Grid item xs={6}>{calculateDistance(product)}</Grid>
+                                    <Grid item xs={6}>{calculateDistance(product)} km</Grid>
                          </Grid>
                     </Grid>
                      <Grid item xs={6} >
