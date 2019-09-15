@@ -42,7 +42,7 @@ function ProductDetailsView({history, match}) {
     }, [ean])
 
     const [scoring, setScoring] = React.useState(0);
-    const productScoring = 77
+    const productScoring = product ? product.score : 0
 
       React.useEffect(() => {
         function progress() {
@@ -61,7 +61,7 @@ function ProductDetailsView({history, match}) {
                   clearInterval(timer);
              };
         }
-      }, []);
+      }, [productScoring]);
 
     function getProductAndPackageWeight(product) {
         return product.productWeight + product.packageWeight;
