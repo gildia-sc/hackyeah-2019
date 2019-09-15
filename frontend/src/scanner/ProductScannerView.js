@@ -10,7 +10,6 @@ function ProductScannerView() {
 
     return (
         <>
-            <Link to="/demo-ean-codes">Test bar codes</Link>
             <Scanner/>
             <div>
                 {products.map((product, id) => <ProductListElement product={product} key={id} betterProduct={betterProducts[product.ean]} />)}
