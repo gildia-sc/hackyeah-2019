@@ -5,11 +5,12 @@ import ProductDetailsView from "./product/ProductDetalisView";
 import DemoEanCodesView from "./demo/DemoEanCodesView";
 import SendNewProductView from "./send-new/SendNewProductView";
 
-import {BrowserRouter as Router, Route} from "react-router-dom"
+import {BrowserRouter as Router, Link, Route} from "react-router-dom"
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import NewProductSentView from "./send-new/NewProductSentView";
+<<<<<<< HEAD
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 function HomeIcon(props) {
@@ -21,6 +22,10 @@ function HomeIcon(props) {
     </a>
   );
 }
+=======
+import IconButton from "@material-ui/core/IconButton";
+import HomeIcon from '@material-ui/icons/Home';
+>>>>>>> Ikonka "Home" w nawigacji
 
 function App() {
     return (
@@ -29,7 +34,10 @@ function App() {
 
                 <AppBar position="static">
                     <Toolbar>
-                        <Typography variant="h6">Choose Eco</Typography>&nbsp;&nbsp;<HomeIcon color="action" />
+                        <IconButton edge="start" color="inherit" aria-label="menu">
+                            <Link to="/"><HomeIcon /></Link>
+                        </IconButton>
+                        <Typography variant="h6">Choose Eco</Typography>
                     </Toolbar>
                 </AppBar>
                 <Route exact path="/" component={ProductScannerView}/>
