@@ -18,7 +18,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import NotFound from "./NotFound"
 
 function button({history}) {
-    return (<Button color="inherit" onClick={() => history.push("/demo-ean-codes") }>Sample barcodes (test)</Button>);
+    return (<Button color="inherit" onClick={() => history.push("/demo-ean-codes") }>Test data</Button>);
 }
 
 const ButtonWithRouter = withRouter(button);
@@ -40,7 +40,7 @@ function App() {
 
     return (
         <Router>
-            <div className="App" className={classes.root}>
+            <div className={classes.root}>
 
                 <AppBar position="static">
                     <Toolbar>

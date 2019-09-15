@@ -50,7 +50,12 @@ function ProductDetailsView({history, match}) {
             if (oldScoring === productScoring) {
               return productScoring;
             }
-            const diff = 1;
+            let diff = 1;
+            if (productScoring > 60) {
+                diff = 3;
+            } else if (productScoring > 40) {
+                diff = 2;
+            }
             return Math.min(oldScoring + diff, productScoring);
           });
         }

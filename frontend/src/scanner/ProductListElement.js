@@ -37,8 +37,8 @@ function ProductListElement({history, product, betterProduct}) {
 
     return product.found ? (
         <div>
-            <div className={classes.root}>
-                <Paper className={classes.paper} onClick={() => {
+            <div className={classes.root} >
+                <Paper className={classes.paper} style={{ cursor: 'pointer' }} onClick={() => {
                     history.push("/product/" + product.ean)
                 }}>
                     <Grid container spacing={2}>
@@ -60,7 +60,7 @@ function ProductListElement({history, product, betterProduct}) {
                                         EAN: {product.ean}
                                     </Typography>
                                 </Grid>
-                                <Grid item>
+                                <Grid item xs={4}>
                                     {betterProduct && (
                                         <Chip
                                             icon={<FaceIcon/>}
