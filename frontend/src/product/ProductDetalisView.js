@@ -23,10 +23,7 @@ function ProductDetailsView({history, match}) {
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-      },
-      margin_top: {
-          marginTop: '10px',
-        }
+      }
     }));
     const BorderLinearProgress = withStyles({
       root: {
@@ -100,13 +97,13 @@ function ProductDetailsView({history, match}) {
 
                     </Grid>
                     <Grid item xs={12}><img src={product.image} style={{display: "block",
-                                                                        "margin-left": "auto",
-                                                                        "margin-right": "auto",
+                                                                        "marginLeft": "auto",
+                                                                        "marginRight": "auto",
                                                                         width: "50%"}}/></Grid>
                     <Grid item xs={6} >
                         <Grid container direction="column" justify="flex-end" alignItems="center">
                             <Typography variant="h5" component="h4">Product</Typography><br />
-                                <Grid item xs={6}><Typography variant="caption" display="block" gutterBottom classes={classes.margin_top}>Company</Typography></Grid>
+                                <Grid item xs={6}><Typography variant="caption" display="block" gutterBottom>Company</Typography></Grid>
                                     <Grid item xs={6}><img src={product.company.logo} width="40" height="40"/></Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Category</Typography></Grid>
                                     <Grid item xs={6}>{product.category.name}</Grid>
@@ -119,7 +116,7 @@ function ProductDetailsView({history, match}) {
                      <Grid item xs={6} >
                         <Grid container direction="column" justify="flex-end" alignItems="center" >
                             <Typography variant="h5" component="h3">Package</Typography><br />
-                                <Grid item xs={6}><Typography variant="caption" display="block" gutterBottom classes={classes.margin_top}>Weight %</Typography></Grid>
+                                <Grid item xs={6}><Typography variant="caption" display="block" gutterBottom>Weight %</Typography></Grid>
                                     <Grid item xs={6}>{getGeneratedWasteScore(product)} %</Grid>
                                 <Grid item xs={6}><br /><Typography variant="caption" display="block" gutterBottom>Type</Typography></Grid>
                                     <Grid item xs={6}><img src={product.packageMaterial.logo} width="40" height="40"/></Grid>
