@@ -1,5 +1,7 @@
-async function get(ean) {
-    const data = await fetch(`http://localhost:8080/products/search/findProductByEan?ean=${ean}&projection=ProductProjection`)
+const URL = 'http://localhost:8080/products/search/findTopByCategoryNameAndScoreGreaterThanOrderByScoreDesc'
+
+async function get(category, score) {
+    const data = await fetch(`${URL}?categoryName=${category}&score=${score}&projection=ProductProjection`)
     return data.json()
 }
 

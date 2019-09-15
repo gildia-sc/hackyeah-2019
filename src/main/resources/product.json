@@ -12,6 +12,7 @@
     "latitude": 49.97363,
     "longitude": 19.81422,
     "lca": 49,
+    "score" : 20,
     "category": {
       "_class": "pl.hackyeah2019.hackyeah.product.Category",
       "id": 1
@@ -46,6 +47,7 @@
     "latitude": 52.34432,
     "longitude": 21.09703,
     "lca": 49,
+    "score" : 40,
     "category": {
       "_class": "pl.hackyeah2019.hackyeah.product.Category",
       "id": 1
@@ -76,6 +78,7 @@
     "latitude": 52.18826,
     "longitude": 20.9447,
     "lca": 51,
+    "score" : 60,
     "category": {
       "_class": "pl.hackyeah2019.hackyeah.product.Category",
       "id": 2
@@ -105,6 +108,7 @@
     "productDurability": "3 years",
     "latitude": 49.829140,
     "longitude": 18.260060,
+    "score" : 80,
     "lca": 78,
     "category": {
       "_class": "pl.hackyeah2019.hackyeah.product.Category",
@@ -144,6 +148,7 @@
     "productDurability": "Not available",
     "latitude": 52.584780,
     "longitude": 19.651620,
+    "score" : 55,
     "lca": 32,
     "category": {
       "_class": "pl.hackyeah2019.hackyeah.product.Category",
@@ -175,6 +180,7 @@
     "latitude": 40.770790,
     "longitude": -3.169280,
     "lca": 78,
+    "score" : 77,
     "category": {
       "_class": "pl.hackyeah2019.hackyeah.product.Category",
       "id": 5
@@ -205,6 +211,7 @@
     "latitude": 51.747320,
     "longitude": 19.432770,
     "lca": 57,
+    "score" : 10,
     "category": {
       "_class": "pl.hackyeah2019.hackyeah.product.Category",
       "id": 5
@@ -235,6 +242,7 @@
     "latitude": 52.183280,
     "longitude": 20.991720,
     "lca": 83,
+    "score" : 39,
     "category": {
       "_class": "pl.hackyeah2019.hackyeah.product.Category",
       "id": 1

@@ -6,11 +6,16 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import {useSelector} from "react-redux"
+import {withRouter} from "react-router-dom"
 
-export default function BetterProductDialog() {
+function BetterProductDialog({history}) {
 
-    const betterProduct = useSelector(state => state.betterProduct.product)
+    const product = useSelector(state => state.betterProduct.product)
     const [open, setOpen] = React.useState(true);
+
+    function handleAgree() {
+        history.push('/product/' + product.ean) ;
+    }
 
     function handleClose() {
         setOpen(false);
@@ -19,7 +24,7 @@ export default function BetterProductDialog() {
     return (
         <div>
             <Dialog
-                open={!!(open && betterProduct)}
+                open={!!(open && product)}
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
@@ -27,14 +32,15 @@ export default function BetterProductDialog() {
                 <DialogTitle id="alert-dialog-title">{"Better product found in your area "}</DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                       Do you want open better product details?
+                        Found product: {product && product.name} with score {product && product.score}
+                        Do you want open better product details?
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">
                         No, thanks
                     </Button>
-                    <Button onClick={handleClose} color="primary" autoFocus>
+                    <Button onClick={handleAgree} color="primary" autoFocus>
                         Yes, please
                     </Button>
                 </DialogActions>
@@ -42,3 +48,5 @@ export default function BetterProductDialog() {
         </div>
     );
 }
+
+export default withRouter(BetterProductDialog)

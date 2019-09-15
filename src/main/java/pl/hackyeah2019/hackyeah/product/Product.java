@@ -45,4 +45,6 @@ public class Product {
 
     private Double lca;
 
+    private Double score;
+
 }

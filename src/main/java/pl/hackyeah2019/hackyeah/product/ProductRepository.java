@@ -15,6 +15,9 @@ public interface ProductRepository extends PagingAndSortingRepository<Product, L
 
     List<Product> findProductsByCompanyId(@Param("id") Long id);
 
+    Optional<Product> findTopByCategoryNameAndScoreGreaterThanOrderByScoreDesc(@Param("categoryName") String categoryName,
+                                                                           @Param("score") Double score);
+
     @Projection(name = "ProductProjection", types = {Product.class})
     public interface ProductProjection {
 
@@ -43,5 +46,7 @@ public interface ProductRepository extends PagingAndSortingRepository<Product, L
         Double getLongitude();
 
         Double getLca();
+
+        Double getScore();
     }
 }
