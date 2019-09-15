@@ -15,6 +15,7 @@ function ProductDetailsView({history, match}) {
     const products = useSelector(state => state.products.products);
     const product = products.find(p => p.ean === ean);
     const humanizer = require('humanize-duration')
+    const [scoring, setScoring] = React.useState(0);
     const useStyles = makeStyles(theme => ({
       root: {
         flexGrow: 1,
@@ -32,16 +33,15 @@ function ProductDetailsView({history, match}) {
       },
       bar: {
         borderRadius: 20,
-        backgroundColor: '#ff6c5c',
+        backgroundColor: `hsl(${scoring*1.2}, 100%, 50%)`,
       },
     })(LinearProgress);
     const classes_progress = useStyles();
     const classes = useStyles();
+
     useEffect(() => {
         product || dispatch(fetchProduct(ean))
     }, [ean])
-
-    const [scoring, setScoring] = React.useState(0);
     const productScoring = product ? product.score : 0
 
       React.useEffect(() => {

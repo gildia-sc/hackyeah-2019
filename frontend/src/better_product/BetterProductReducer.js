@@ -1,9 +1,9 @@
-export default (state = {product: null, error: null, isFetching: false, query: {}}, action) => {
+export default (state = {error: null, isFetching: false, query: {}}, action) => {
     switch (action.type) {
         case 'FETCH_BETTER_PRODUCT':
-            return {...state, isFetching: true, query: action.query};
+            return {...state, isFetching: true, query: action.query, error: null};
         case 'FETCH_BETTER_PRODUCT_SUCCESS':
-            return {...state, isFetching: false, product: action.product};
+            return {...state, isFetching: false, error: null, query: {}};
         case 'FETCH_BETTER_PRODUCT_FAILURE':
             return {...state, isFetching: false, error: action.error.toString()};
         default:
