@@ -24,3 +24,24 @@ For some categories of product we can even give more metrics:
 When user scan a product we can show him recommendation of better products from the same category that are in shop - based on historical scans of other users in that localization. 
 
 #EveryDayBetter #GiveALittleMore
+
+# How to run
+
+Backend:
+```
+sdk use 11.0.2-open (Java 11)
+./gradlew bootRun
+```
+
+http://localhost:8080/
+
+Frontend
+```
+cd frontend
+nvm use v10.15.3
+npm -g install yarn
+yarn install
+npm start
+```
+
+http://localhost:3000/
