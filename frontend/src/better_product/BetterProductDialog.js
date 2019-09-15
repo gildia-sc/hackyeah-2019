@@ -5,8 +5,11 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import {useSelector} from "react-redux"
 
 export default function BetterProductDialog() {
+
+    const betterProduct = useSelector(state => state.betterProduct.product)
     const [open, setOpen] = React.useState(true);
 
     function handleClose() {
@@ -16,7 +19,7 @@ export default function BetterProductDialog() {
     return (
         <div>
             <Dialog
-                open={open}
+                open={!!(open && betterProduct)}
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"

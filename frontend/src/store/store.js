@@ -8,10 +8,12 @@ import {all} from 'redux-saga/effects'
 import createSagaMiddleware from 'redux-saga'
 import {gpsSaga} from "../gps/GpsSaga"
 import gpsReducer from "../gps/GpsReducer"
+import betterProduct from "../better_product/BetterProductReducer"
+import {betterProductSaga} from "../better_product/BetterProductSaga"
 
 const sagaMiddleware = createSagaMiddleware();
 
-export default createStore(combineReducers({productScanner, products, gpsReducer}),
+export default createStore(combineReducers({productScanner, products, gpsReducer, betterProduct}),
     composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
 
@@ -19,7 +21,8 @@ function* sagas() {
     yield all([
         productSaga(),
         scannerSaga(),
-        gpsSaga()
+        gpsSaga(),
+        betterProductSaga()
     ])
 }
 
