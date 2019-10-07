@@ -1,7 +1,9 @@
-FROM node:10
+FROM nginx
+EXPOSE 80
 
-COPY . .
+COPY nginx/localhost.crt /certs/localhost.crt
+COPY nginx/localhost.key /certs/localhost.key
 
-EXPOSE 8000
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
-ENTRYPOINT node server.js
+COPY build build
